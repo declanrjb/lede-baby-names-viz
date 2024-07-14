@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+
+    <!-- some basic stuff  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SVG with D3</title>
+
+    <!-- 
+      add your stylesheet 
+      base.css loads the templated css that should not be changed
+      you can tweak your own css in custom.css and it will override base.css
+      WARNING: the order of the stylesheets matters
+    -->
+    <!--https://code.highcharts.com/mapdata/-->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="map.css">
+
+    <!-- Step 2: add your d3 script below -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+
+    <!-- your JS code that uses d3 to manipulate data -->
+    
+  </head>
+  <body>
+    <div class="row">
+      <div class="column" id="column-left">
+        <div class="story-content">
+          <h3 class="headline">The Michael Migration</h3>
+          <p class="blurb">At the start of the 20th century, many American names were highly regional. 
+            Michaels, for example, were far more common in the Northeast than in the West,
+          after adjusting for population density. But a <a href='https://www.ssa.gov/oact/babynames/limits.html'>century of data</a> from the 
+          Social Security Administration on Americans' favorite baby names shows that many names 
+          have become less regional over time. Select a name and scroll
+          to explore the migration of baby names over time.</p>
+          <div class="selector-line">
+            <p class="selector-intro">Show me: </p>
+            <select id="single-select">
+              <option value="michael">Michael</option>
+              <option value="jose">Jose</option>
+            </select>
+          </div>
+          
+        </div>
+      </div>
+      <div class="column" id="column-main">
+        <div id="container"></div>
+      </div>
+      <div class="column" id="column-right">
+        <div class="slider-bar"></div>
+        <div class="shuttle">
+          <div class="shuttle-text">1910</div>
+          <div class="shuttle-ball"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
