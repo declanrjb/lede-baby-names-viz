@@ -10,6 +10,26 @@ function dict_vals(dict) {
     return values;
   }
 
+  function disableScroll() {
+    // Get the current page scroll position
+    scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop;
+    scrollLeft =
+        window.pageXOffset ||
+        document.documentElement.scrollLeft,
+
+        // if any scroll is attempted,
+        // set this to the previous value
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function enableScroll() {
+    window.onscroll = function () { };
+}
+
 function updateMap(year,name,topology) {
     console.log('updating map');
     var file_name = 'names/' + name + '/' + year.toString() + '.csv';
@@ -64,6 +84,9 @@ function updateMap(year,name,topology) {
   Number.prototype.clamp = function(min, max) {
     return Math.min(Math.max(this, min), max);
   };
+
+  disableScroll();
+
   var nameSelect = document.querySelector('#single-select');
 
     d3.csv('names/names_list.csv').then(function(result) {
