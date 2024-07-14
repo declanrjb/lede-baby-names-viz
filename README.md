@@ -11,3 +11,7 @@ State-specific data courtesy of the U.S. Social Security Administration
 
 ## Attribution
 Base map courtesy of Highcharts (https://jsfiddle.net/gh/get/jquery/1.11.0/highslide-software/highcharts.com/tree/master/samples/mapdata/countries/us/us-all)
+
+## Further Development
+No mobile version exists as of now, and one should be built time allowing, perhaps with a horizontal slider
+instead of a vertical scroll effect.
